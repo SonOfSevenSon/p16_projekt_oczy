@@ -1,0 +1,279 @@
+@import reset
+
+body
+    font-size: 20px
+    color: white
+    background-color: #333
+    overflow: hidden
+
+h1
+    padding-top: 5vh
+    text-align: center
+    color: white
+    text-transform: uppercase
+
+p
+    padding: 150px
+    font-size: 60px
+    text-align: center
+    text-transform: uppercase
+
+.container
+    position: relative
+    margin: 0 auto
+
+.field
+    position: absolute
+    width: 300px
+    height: 300px
+    background-color: tomato
+    border-radius: 50%
+
+.f-left
+    top: calc(50vh - 150px)
+    left: calc(25vw - 150px)
+
+.f-right
+    top: calc(50vh - 150px)
+    left: calc(75vw - 150px)
+
+.eyelid-one
+    background-color: tomato
+    animation: blink 1s infinite 0.3s
+
+
+.eyelid-two
+    background-color: pink
+    animation: blink 1s infinite 0.5s
+
+.eye
+    background-color: white
+    animation: blink 1s infinite 1s
+
+.pupil
+    position: absolute
+    width: 50px
+    height: 50px
+    background-color: black
+    border-radius: 50%
+    animation: pupil 6s infinite
+
+.p-left
+    top: calc(50vh - 25px)
+    left: calc(25vw - 25px)
+
+.p-right
+    top: calc(50vh - 25px)
+    left: calc(75vw - 25px)
+
+.iris
+    position: absolute
+    width: 100px
+    height: 100px
+    background-image: radial-gradient(blue,royalblue,white)
+    border-radius: 50%
+    animation: iris 6s infinite
+
+.i-left
+    top: calc(50vh - 50px)
+    left: calc(25vw - 50px)
+
+.i-right
+    top: calc(50vh - 50px)
+    left: calc(75vw - 50px)
+
+.eyehole-left
+    position: absolute
+    top: calc(50vh - 300px)
+    left: calc(25vw - 200px)
+    width: 400px
+    height: 600px
+    border: 2px solid black
+    border-radius: 50%
+    background-color: grey
+    transform: rotateX(120deg)
+
+.eyehole-right
+    position: absolute
+    top: calc(50vh - 300px)
+    left: calc(75vw - 200px)
+    width: 400px
+    height: 600px
+    border: 2px solid black
+    border-radius: 50%
+    background-color: grey
+    transform: rotateX(120deg)
+
+@keyframes blink
+    0% 
+        transform: rotateX(0deg)
+
+    100% 
+        transform: rotateX(360deg)
+
+@keyframes pupil
+    0% 
+        transform: translateX(0)
+    33% 
+        transform: translateX(125px)
+
+    66%
+        transform: translateX(-125px)
+
+    100%
+        transform: translateX(0px)  
+
+@keyframes iris
+    0% 
+        transform: translateX(0)
+    33% 
+        transform: translateX(100px)
+
+    66%
+        transform: translateX(-100px)
+
+    100%
+        transform: translateX(0px) 
+
+.nose-red
+    position: absolute
+    top: calc(75vh - 150px)
+    left: calc(50vw - 150px)
+    width: 300px
+    height: 300px
+    background-color: red
+    border: 3px solid black
+    border-radius: 50%
+    transform: rotateX(45deg)
+
+.nose-white
+    position: absolute
+    top: calc(75vh - 130px)
+    left: calc(50vw - 125px)
+    width: 250px
+    height: 250px
+    background-color: white
+    border-radius: 50%
+    transform: rotateX(65deg)
+
+.tear
+    position: absolute
+    top: 35vh
+    left: 10vw
+    width: 50px
+    height: 50px
+    background-color: royalblue
+    border-radius: 50%
+    animation: tear 3s infinite
+
+.tear::before
+    position: absolute
+    top: -10px
+    content: ''
+    background-color: royalblue
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    transform: rotateY(25deg)
+
+.tear::after
+    position: absolute
+    top: -20px
+    content: ''
+    background-color: royalblue
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    transform: rotateY(45deg)
+
+.tear2::before
+    position: absolute
+    top: -30px
+    content: ''
+    background-color: royalblue
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    transform: rotateY(65deg)
+
+@keyframes tear
+    0%
+        transform: translate(0,0)
+
+    50%
+        transform: translate(0,350px)
+        opacity: 0
+
+    100%
+        transform: translate(0,0)
+        opacity: 0
+
+.eyebrow
+    position: absolute
+    top: 17vh
+    width: 350px
+    height: 50px
+    background-color: black
+    border-radius: 25px
+    transform: rotate(-15deg)
+
+.eyebrow-left
+    left: calc(25vw - 175px)
+    animation: eyebrow-left 1s infinite
+
+.eyebrow-right
+    left: calc(75vw - 175px)
+    animation: eyebrow-right 1s infinite
+
+@keyframes eyebrow-right
+    0%
+        transform: rotate(0deg)
+
+    50%
+        transform: rotate(5deg)
+
+    100%
+        transform: rotate(0deg)
+
+@keyframes eyebrow-left
+    0%
+        transform: rotate(0deg)
+
+    50%
+        transform: rotate(-5deg)
+
+    100%
+        transform: rotate(0deg)
+
+.phone
+    position: absolute
+    top: 60vh
+    left: calc( 50vw - 250px )
+    width: 500px
+    height: 800px
+    background-image: linear-gradient(70deg, lime, green)
+    border: 3px solid green
+    border-radius: 50px
+    box-shadow: 0px 0px 200px white
+    animation: phone 5s infinite
+
+.camera
+    position: absolute
+    top: 50px
+    left: 50px
+    width: 50px
+    height: 50px
+    border: 10px solid grey
+    border-radius: 50%
+    background-color: black
+
+@keyframes phone
+    0%
+        transform: translateY(0px)
+
+    50%
+        transform: translateY(200px)
+
+    100%
+        transform: translateY(0px)
+        
